@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Nanum Pen Script", cursive;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-paper: #faf7f4;
+  --color-sand: #efe7df;
+  --color-sand-deep: #e5d8cb;
+  --color-ink: #231c18;
+  --color-ink-secondary: #574c45;
+  --color-ink-muted: #786b63;
+  --color-accent: #9b5f46;
+  --color-accent-hover: #844e38;
+  --color-terracotta: #b97d65;
+  --color-highlight: #ead4c0;
+}
+
+:root {
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Hero Portrait Framing — tune zoom and crop focus here */
+  --portrait-zoom: 1.5;
+  --portrait-pos-x: 50%;
+  --portrait-pos-y: 30%;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-mono-meta {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Signature hand-drawn tactile button corners inspired by anumehajain.space */
+.btn-sketch {
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  transition: background-color 180ms var(--ease-smooth),
+    color 180ms var(--ease-smooth),
+    border-color 180ms var(--ease-smooth),
+    transform 150ms var(--ease-smooth);
+}
+
+.btn-sketch:active {
+  transform: scale(0.97);
+}
+
+/* Subtle hero watercolor atmosphere from Alysa's approved Option A */
+.hero-atmosphere {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-atmosphere::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/hero-wash.jpg");
+  background-size: cover;
+  background-position: right center;
+  opacity: 0.62;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-atmosphere::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(250, 247, 244, 0) 68%, var(--color-paper) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-atmosphere::before {
+    opacity: 0.36;
+    background-position: right bottom;
+  }
+}
+
+/* Polaroid portrait framing with tunable zoom & axis */
+.polaroid-img {
+  object-fit: cover;
+  object-position: var(--portrait-pos-x) var(--portrait-pos-y);
+  transform: scale(var(--portrait-zoom));
+  transform-origin: var(--portrait-pos-x) var(--portrait-pos-y);
+  transition: transform 420ms var(--ease-smooth);
+}
+
+.polaroid-card:hover .polaroid-img {
+  transform: scale(calc(var(--portrait-zoom) + 0.04));
+}
+
+/* Smooth reveal & staggered card entrances */
+@keyframes fadeRise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  animation: fadeRise 420ms var(--ease-smooth) both;
+}
+
+.reveal-block {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 520ms var(--ease-smooth), transform 520ms var(--ease-smooth);
+}
+
+.reveal-block.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile drawer smooth grid-rows animation */
+.drawer-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 260ms var(--ease-smooth), opacity 220ms var(--ease-smooth);
+}
+
+.drawer-wrap.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal-block {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

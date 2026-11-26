@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K3 & Lingkungan - Legal Department</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+    /* Toast Notification */
+    .toast-container { position: fixed; top: 1rem; right: 1rem; z-index: 50; display: flex; flex-direction: column; gap: 0.5rem; }
+    .toast { min-width: 250px; padding: 1rem; border-radius: 0.5rem; color: white; opacity: 0; transform: translateY(-20px); animation: slideIn 0.3s forwards; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .toast.success { background-color: #10B981; }
+    .toast.error { background-color: #EF4444; }
+    .toast.info { background-color: #3B82F6; }
+    @keyframes slideIn { to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body class="text-gray-800">
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Main Content -->
+  <div class="flex h-screen overflow-hidden">
+    <!-- Sidebar Container -->
+    <div id="sidebar-container" class="w-64 flex-shrink-0 bg-white border-r z-20"></div>
+
+    <!-- Main Area -->
+    <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+      
+      <!-- Top Bar -->
+      <header class="bg-white border-b h-16 flex items-center justify-between px-6 shrink-0">
+        <div class="flex items-center gap-4">
+          <h1 class="text-xl font-bold text-gray-800">K3 & Lingkungan</h1>
+        </div>
+        <div class="flex items-center gap-3" id="actions">
+          <!-- Action buttons injected by JS -->
+        </div>
+      </header>
+
+      <!-- Content Scrollable -->
+      <main class="flex-1 overflow-auto p-6">
+        <div class="bg-white rounded-lg shadow border overflow-hidden">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-gray-50 text-gray-600 font-medium border-b" id="thead">
+              <!-- Header injected by JS -->
+            </thead>
+            <tbody id="tbody" class="divide-y divide-gray-100">
+              <!-- Rows injected by JS -->
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- Modal Form -->
+  <div id="layer" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity" id="backdrop"></div>
+    <div class="absolute inset-y-0 right-0 w-full max-w-md bg-white shadow-2xl transform transition-transform duration-300 flex flex-col">
+      
+      <div class="px-6 py-4 border-b flex items-center justify-between bg-gray-50">
+        <h2 class="text-lg font-semibold text-gray-800" id="layerTitle">New Safety License</h2>
+        <button id="btnClose" class="text-gray-400 hover:text-gray-600 transition-colors">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-6 space-y-5">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lisensi</label>
+          <input type="text" id="f_name" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Contoh: Ahli K3 Umum">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Nomor Dokumen</label>
+          <input type="text" id="f_document" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Nomor Sertifikat/Lisensi">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Kategori</label>
+          <input type="text" id="f_category" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Contoh: Sertifikasi Personel">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Institusi Penerbit</label>
+          <input type="text" id="f_institution" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Contoh: Kemnaker">
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Tanggal Berlaku</label>
+            <input type="date" id="f_start" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Tanggal Kedaluwarsa</label>
+            <input type="date" id="f_exp" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Tanggal Pengingat (Auto -6 Bulan)</label>
+          <input type="date" id="f_rem" class="w-full px-3 py-2 border rounded-lg bg-gray-50 text-gray-500 cursor-not-allowed">
+          <p class="text-xs text-gray-400 mt-1">Otomatis dihitung 6 bulan sebelum kedaluwarsa.</p>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Status</label>
+          <select id="f_inactive" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+            <option value="0">Active</option>
+            <option value="1">Inactive</option>
+          </select>
+        </div>
+
+        <div id="statusNote" class="p-3 bg-blue-50 text-blue-700 text-sm rounded hidden">
+          <i class="fas fa-info-circle mr-1"></i> Status Overdue akan otomatis aktif jika tanggal kedaluwarsa terlewati.
+        </div>
+      </div>
+
+      <div class="px-6 py-4 border-t bg-gray-50 flex justify-end gap-3">
+        <button id="f_cancel" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">Batal</button>
+        <button id="f_submit" class="px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 rounded-lg shadow-sm transition-colors">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import Preview Modal -->
+  <div id="importPreviewLayer" class="fixed inset-0 z-[60] hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="importPreviewBackdrop"></div>
+    <div class="absolute inset-10 bg-white rounded-xl shadow-2xl flex flex-col overflow-hidden animate-fade-in-up">
+      <div class="px-6 py-4 border-b flex justify-between items-center bg-gray-50">
+        <h3 class="text-lg font-bold text-gray-800">Preview Import CSV</h3>
+        <button id="btnClosePreview" class="text-gray-400 hover:text-gray-600"><i class="fas fa-times text-xl"></i></button>
+      </div>
+      
+      <div class="px-6 py-3 bg-blue-50 border-b flex justify-between items-center text-sm">
+        <span id="importStats" class="font-medium text-blue-800">Loading...</span>
+        <div class="flex gap-4">
+          <label class="flex items-center gap-2 cursor-pointer select-none">
+            <input type="checkbox" id="chkHideDup" class="accent-blue-600">
+            <span class="text-gray-700">Sembunyikan Duplikat</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="flex-1 overflow-auto p-0">
+        <table class="w-full text-sm text-left border-collapse">
+          <thead class="bg-gray-100 text-gray-600 sticky top-0 z-10 shadow-sm">
+            <tr>
+              <th class="p-3 w-10 border-b"><input type="checkbox" id="chkAll" class="accent-blue-600"></th>
+              <th class="p-3 border-b">Nama</th>
+              <th class="p-3 border-b">Dokumen</th>
+              <th class="p-3 border-b">Kategori</th>
+              <th class="p-3 border-b">Institusi</th>
+              <th class="p-3 border-b">Tgl Berlaku</th>
+              <th class="p-3 border-b">Tgl Kedaluwarsa</th>
+              <th class="p-3 border-b">Pengingat</th>
+              <th class="p-3 border-b">Status</th>
+              <th class="p-3 border-b">Info Duplikat</th>
+            </tr>
+          </thead>
+          <tbody id="previewBody" class="divide-y divide-gray-100 bg-white"></tbody>
+        </table>
+      </div>
+
+      <div class="px-6 py-4 border-t bg-gray-50 flex justify-end">
+        <button id="btnCommitSelected" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 shadow-sm font-medium transition-colors">
+          Simpan yang dipilih
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/legal/assets/js/pages/safety2.js"></script>
+  <script src="/legal/assets/global-sidebar.js" defer></script>
+</body>
+</html>

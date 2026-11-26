@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/cashtracking/api/:match*", "destination": "/api/cashtracking" },
+    { "source": "/cashtracking/static/:match*", "destination": "/cashtracking/static/:match*" },
+    { "source": "/cashtracking", "destination": "/cashtracking/index.html" },
+    { "source": "/cashtracking/:match*", "destination": "/cashtracking/index.html" },
+    { "source": "/gams/api/:match*", "destination": "/api/gams" },
+    { "source": "/gams", "destination": "/gams/dashboard.html" },
+    { "source": "/gams/", "destination": "/gams/dashboard.html" },
+    { "source": "/legal/api/:match*", "destination": "/api/legal" },
+    { "source": "/legal", "destination": "/legal/dashboard.html" },
+    { "source": "/legal/", "destination": "/legal/dashboard.html" },
+    { "source": "/healthcare-web", "destination": "/healthcare-web/index.html" },
+    { "source": "/healthcare-web/", "destination": "/healthcare-web/index.html" }
+  ]
+}
