@@ -56,7 +56,7 @@ export function JourneySection({
                 cx={cx}
                 cy={idx % 2 === 0 ? 19 : 23}
                 r="5.5"
-                fill={idx === 3 ? "#9B5F46" : "#FAF7F4"}
+                fill={idx === 0 ? "#9B5F46" : "#FAF7F4"}
                 stroke="#9B5F46"
                 strokeWidth="2"
               />

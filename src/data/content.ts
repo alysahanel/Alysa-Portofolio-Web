@@ -575,39 +575,6 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
       annotation: "not just one straight path",
       items: [
         {
-          role: "PIC Administration Division",
-          organization: "SetSail BizAccel",
-          period: "Oct 2024 - May 2025",
-          summary:
-            "Led administrative operations for university business incubation programs, maintaining structured documentation and daily coordination.",
-          highlights: [
-            "Oversaw internal workflows across startup workshops and incubation activities",
-            "Maintained systematic reporting and clear cross-team communication",
-          ],
-        },
-        {
-          role: "IoT Research Intern",
-          organization: "BRIN (Research Center of Electronics)",
-          period: "Apr 2025 - May 2025",
-          summary:
-            "Planned and delivered a 6-week automated water temperature monitoring module for BRIN's smart aquaculture system.",
-          highlights: [
-            "Authored proposals, process flowcharts, test logs, and the final research report",
-            "Presented weekly evaluations and coordinated cross-module integration",
-          ],
-        },
-        {
-          role: "System Development Intern (HRGA & Legal)",
-          organization: "PT Nippon Steel Chemical & Material Indonesia",
-          period: "Aug 2025 - Dec 2025",
-          summary:
-            "Supported HRGA and Legal departments by building internal administrative and compliance tracking workflows.",
-          highlights: [
-            "Digitized General Affairs and regulatory compliance records into structured systems",
-            "Conducted testing, troubleshooting, and documentation for deployment readiness",
-          ],
-        },
-        {
           role: "Digital Learning Operations Intern",
           organization: "President University eCampus",
           period: "Mar 2026 - Jun 2026",
@@ -628,6 +595,39 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
           highlights: [
             "Owned RFID authentication module, MQTT debugging, and card dispenser",
             "Passed User Acceptance Testing (6/6 categories) with IT Senior Supervisor",
+          ],
+        },
+        {
+          role: "System Development Intern (HRGA & Legal)",
+          organization: "PT Nippon Steel Chemical & Material Indonesia",
+          period: "Aug 2025 - Dec 2025",
+          summary:
+            "Supported HRGA and Legal departments by building internal administrative and compliance tracking workflows.",
+          highlights: [
+            "Digitized General Affairs and regulatory compliance records into structured systems",
+            "Conducted testing, troubleshooting, and documentation for deployment readiness",
+          ],
+        },
+        {
+          role: "IoT Research Intern",
+          organization: "BRIN (Research Center of Electronics)",
+          period: "Apr 2025 - May 2025",
+          summary:
+            "Planned and delivered a 6-week automated water temperature monitoring module for BRIN's smart aquaculture system.",
+          highlights: [
+            "Authored proposals, process flowcharts, test logs, and the final research report",
+            "Presented weekly evaluations and coordinated cross-module integration",
+          ],
+        },
+        {
+          role: "PIC Administration Division",
+          organization: "SetSail BizAccel",
+          period: "Oct 2024 - May 2025",
+          summary:
+            "Led administrative operations for university business incubation programs, maintaining structured documentation and daily coordination.",
+          highlights: [
+            "Oversaw internal workflows across startup workshops and incubation activities",
+            "Maintained systematic reporting and clear cross-team communication",
           ],
         },
         {
@@ -1196,39 +1196,6 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
       annotation: "bukan sekadar satu jalur lurus",
       items: [
         {
-          role: "PIC Divisi Administrasi",
-          organization: "SetSail BizAccel",
-          period: "Okt 2024 - Mei 2025",
-          summary:
-            "Memimpin operasional administrasi program inkubasi bisnis universitas dengan dokumentasi dan koordinasi harian yang terstruktur.",
-          highlights: [
-            "Mengawal alur kerja internal di berbagai workshop dan kegiatan startup",
-            "Menjaga pelaporan sistematis serta komunikasi lintas tim yang rapi",
-          ],
-        },
-        {
-          role: "Magang Riset IoT",
-          organization: "BRIN (Pusat Riset Elektronika)",
-          period: "Apr 2025 - Mei 2025",
-          summary:
-            "Merencanakan dan menyelesaikan modul pemantauan suhu air otomatis selama 6 minggu untuk sistem akuakultur cerdas BRIN.",
-          highlights: [
-            "Menyusun proposal, flowchart sistem, log pengujian, dan laporan akhir riset",
-            "Mempresentasikan progres mingguan serta mengoordinasikan integrasi tim",
-          ],
-        },
-        {
-          role: "Magang Pengembangan Sistem (HRGA & Legal)",
-          organization: "PT Nippon Steel Chemical & Material Indonesia",
-          period: "Agu 2025 - Des 2025",
-          summary:
-            "Mendukung departemen HRGA dan Legal dengan membangun alur kerja internal untuk administrasi dan kepatuhan regulasi.",
-          highlights: [
-            "Mendigitalisasi pencatatan General Affairs serta kepatuhan hukum perusahaan",
-            "Melakukan pengujian, perbaikan kendala, dan dokumentasi kesiapan sistem",
-          ],
-        },
-        {
           role: "Magang Operasional Pembelajaran Digital",
           organization: "President University eCampus",
           period: "Mar 2026 - Jun 2026",
@@ -1249,6 +1216,39 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
           highlights: [
             "Menangani modul autentikasi RFID, perbaikan MQTT, dan dispenser kartu",
             "Lulus User Acceptance Testing (6/6 kategori) bersama IT Senior Supervisor",
+          ],
+        },
+        {
+          role: "Magang Pengembangan Sistem (HRGA & Legal)",
+          organization: "PT Nippon Steel Chemical & Material Indonesia",
+          period: "Agu 2025 - Des 2025",
+          summary:
+            "Mendukung departemen HRGA dan Legal dengan membangun alur kerja internal untuk administrasi dan kepatuhan regulasi.",
+          highlights: [
+            "Mendigitalisasi pencatatan General Affairs serta kepatuhan hukum perusahaan",
+            "Melakukan pengujian, perbaikan kendala, dan dokumentasi kesiapan sistem",
+          ],
+        },
+        {
+          role: "Magang Riset IoT",
+          organization: "BRIN (Pusat Riset Elektronika)",
+          period: "Apr 2025 - Mei 2025",
+          summary:
+            "Merencanakan dan menyelesaikan modul pemantauan suhu air otomatis selama 6 minggu untuk sistem akuakultur cerdas BRIN.",
+          highlights: [
+            "Menyusun proposal, flowchart sistem, log pengujian, dan laporan akhir riset",
+            "Mempresentasikan progres mingguan serta mengoordinasikan integrasi tim",
+          ],
+        },
+        {
+          role: "PIC Divisi Administrasi",
+          organization: "SetSail BizAccel",
+          period: "Okt 2024 - Mei 2025",
+          summary:
+            "Memimpin operasional administrasi program inkubasi bisnis universitas dengan dokumentasi dan koordinasi harian yang terstruktur.",
+          highlights: [
+            "Mengawal alur kerja internal di berbagai workshop dan kegiatan startup",
+            "Menjaga pelaporan sistematis serta komunikasi lintas tim yang rapi",
           ],
         },
         {
