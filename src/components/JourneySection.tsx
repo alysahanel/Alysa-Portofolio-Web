@@ -68,7 +68,7 @@ export function JourneySection({
         <div className="reveal-block grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {visibleItems.map((item, idx) => (
             <article
-              key={`${item.organization}-${item.period}`}
+              key={`${item.role}-${item.organization}-${item.period}`}
               style={
                 showAll && idx >= INITIAL_VISIBLE
                   ? { animationDelay: `${(idx - INITIAL_VISIBLE) * 55}ms` }

@@ -38,10 +38,10 @@ app.use(
   })
 );
 
-app.use("/gams", express.static(path.join(__dirname, "gams/public")));
 app.get(["/gams", "/gams/"], (_req, res) => {
   res.sendFile(path.join(__dirname, "gams/public", "dashboard.html"));
 });
+app.use("/gams", express.static(path.join(__dirname, "gams/public"), { index: false }));
 
 const gamsPages = ["login", "dashboard", "requests", "stock", "calendar", "accounts", "stock-report"];
 gamsPages.forEach((p) => {
@@ -66,11 +66,13 @@ app.use(
   })
 );
 
-app.use("/legal", express.static(path.join(__dirname, "legal/frontend/public")));
-app.use("/assets", express.static(path.join(__dirname, "legal/frontend/public/assets")));
 app.get(["/legal", "/legal/"], (_req, res) => {
   res.sendFile(path.join(__dirname, "legal/frontend/public", "dashboard.html"));
 });
+app.use("/legal/assets", express.static(path.join(__dirname, "legal/backend/public-assets")));
+app.use("/legal", express.static(path.join(__dirname, "legal/frontend/public"), { index: false }));
+app.use("/assets", express.static(path.join(__dirname, "legal/backend/public-assets")));
+app.use("/assets", express.static(path.join(__dirname, "legal/frontend/public/assets")));
 
 const legalPages = ["license-permit", "regulatory", "elibrary", "operational", "company", "safety"];
 legalPages.forEach((p) => {

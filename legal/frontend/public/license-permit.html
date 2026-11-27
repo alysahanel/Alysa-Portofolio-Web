@@ -131,19 +131,19 @@
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-12">
           <div class="license-card" onclick="location.href='/legal/company.html'">
             <h2 class="license-card-title">Company & Legal Entity</h2>
-            <div class="license-card-count" id="countCompany">–</div>
+            <div class="license-card-count" id="countCompany">0</div>
             <div class="license-card-items">Items</div>
           </div>
 
           <div class="license-card" onclick="location.href='/legal/operational.html'">
             <h2 class="license-card-title">Operational Permit</h2>
-            <div class="license-card-count" id="countOperational">–</div>
+            <div class="license-card-count" id="countOperational">0</div>
             <div class="license-card-items">Items</div>
           </div>
 
           <div class="license-card" onclick="location.href='/legal/safety.html'">
             <h2 class="license-card-title">Safety License</h2>
-            <div class="license-card-count" id="countSafety">–</div>
+            <div class="license-card-count" id="countSafety">0</div>
             <div class="license-card-items">Items</div>
           </div>
         </section>
@@ -172,21 +172,11 @@
   </script>
   
   <script>
-    (async function(){
+    (function(){
       const setText = (id, val)=>{ const el = document.getElementById(id); if (el) el.textContent = String(val); };
-      try {
-        const [cRes,oRes,sRes] = await Promise.all([
-          fetch('/legal/api/company/count'),
-          fetch('/legal/api/operational/count'),
-          fetch('/legal/api/safety/count')
-        ]);
-        const c = await cRes.json().catch(()=>({total:'–'}));
-        const o = await oRes.json().catch(()=>({total:'–'}));
-        const s = await sRes.json().catch(()=>({total:'–'}));
-        setText('countCompany', c.total ?? '–');
-        setText('countOperational', o.total ?? '–');
-        setText('countSafety', s.total ?? '–');
-      } catch { /* leave placeholders */ }
+      setText('countCompany', 0);
+      setText('countOperational', 0);
+      setText('countSafety', 0);
     })();
   </script>
 </body>

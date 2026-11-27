@@ -31,10 +31,12 @@ if (fs.existsSync(path.join(gamsDist, "dashboard.html"))) {
   fs.copyFileSync(path.join(gamsDist, "dashboard.html"), path.join(gamsDist, "index.html"));
 }
 
-// 2. Legal Web -> dist/legal (+ shared /assets referenced by legal pages)
+// 2. Legal Web -> dist/legal (+ backend/public-assets JS & shared /assets)
 const legalDist = path.join(DIST, "legal");
 copyDir(path.join(ROOT, "legal", "frontend", "public"), legalDist);
+copyDir(path.join(ROOT, "legal", "backend", "public-assets"), path.join(legalDist, "assets"));
 copyDir(path.join(ROOT, "legal", "frontend", "public", "assets"), path.join(DIST, "assets"));
+copyDir(path.join(ROOT, "legal", "backend", "public-assets"), path.join(DIST, "assets"));
 if (fs.existsSync(path.join(legalDist, "dashboard.html"))) {
   fs.copyFileSync(path.join(legalDist, "dashboard.html"), path.join(legalDist, "index.html"));
 }

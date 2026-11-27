@@ -519,10 +519,10 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
       education: {
         degree: "B.Sc. in Informatics (S.Kom.)",
         institution: "President University",
-        period: "2023 - 2026",
+        period: "Sep 2023 - Dec 2026",
         faculty: "Faculty of Artificial Intelligence and Smart Manufacturing",
         summary:
-          "Built a strong foundation in systems thinking, structured analysis, project planning, and technical reporting.",
+          "GPA 3.87/4.0 · Jababeka Scholarship (2nd Rank). Strong foundation in systems thinking, structured analysis, project planning, and technical reporting.",
       },
     },
     skills: {
@@ -575,29 +575,52 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
       annotation: "not just one straight path",
       items: [
         {
-          role: "Internship Program",
+          role: "PIC Administration Division",
           organization: "SetSail BizAccel",
-          period: "Sep 2023 - Apr 2024",
+          period: "Oct 2024 - May 2025",
           summary:
-            "Supported business acceleration initiatives, team coordination, and day-to-day program operations at President University.",
+            "Led administrative operations for university business incubation programs, maintaining structured documentation and daily coordination.",
           highlights: [
-            "Collaborated across student ventures and program stakeholders",
-            "Strengthened administration, communication, and operational execution",
+            "Oversaw internal workflows across startup workshops and incubation activities",
+            "Maintained systematic reporting and clear cross-team communication",
           ],
         },
         {
-          role: "Industrial Intern & IoT Researcher",
-          organization: "Nippon Steel & BRIN",
-          period: "2024",
+          role: "IoT Research Intern",
+          organization: "BRIN (Research Center of Electronics)",
+          period: "Apr 2025 - May 2025",
           summary:
-            "Observed real industrial manufacturing workflows at Nippon Steel and built an autonomous IoT fishery monitoring prototype at BRIN.",
+            "Planned and delivered a 6-week automated water temperature monitoring module for BRIN's smart aquaculture system.",
           highlights: [
-            "Learned industrial discipline, safety standards, and control processes",
-            "Authored the BRIN Smart Fishery final research report",
+            "Authored proposals, process flowcharts, test logs, and the final research report",
+            "Presented weekly evaluations and coordinated cross-module integration",
           ],
         },
         {
-          role: "Capstone Contributor (RFID & Hardware)",
+          role: "System Development Intern (HRGA & Legal)",
+          organization: "PT Nippon Steel Chemical & Material Indonesia",
+          period: "Aug 2025 - Dec 2025",
+          summary:
+            "Supported HRGA and Legal departments by building internal administrative and compliance tracking workflows.",
+          highlights: [
+            "Digitized General Affairs and regulatory compliance records into structured systems",
+            "Conducted testing, troubleshooting, and documentation for deployment readiness",
+          ],
+        },
+        {
+          role: "Digital Learning Operations Intern",
+          organization: "President University eCampus",
+          period: "Mar 2026 - Jun 2026",
+          summary:
+            "Supported distance learning operations across 15+ courses by structuring modules, reviewing usability, and writing user guides.",
+          highlights: [
+            "Aligned 15+ online courses and 12+ weekly modules with official RPS standards",
+            "Authored 5+ self-service guides for 500+ users, cutting support inquiries by 30%",
+          ],
+          isCurrent: true,
+        },
+        {
+          role: "Capstone Contributor (Gate Automation)",
           organization: "PT. Nesinak Industries",
           period: "2025 - 2026",
           summary:
@@ -608,42 +631,63 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
           ],
         },
         {
-          role: "Digital Learning Operations Intern",
-          organization: "President University eCampus",
-          period: "Mar 2026 - Jun 2026",
+          role: "Project Manager (Events & Product Launch)",
+          organization: "SetSail BizAccel & LightenUp",
+          period: "Sep 2024 - Dec 2024",
           summary:
-            "Supported distance learning operations by organizing online courses, structured learning modules, and user guides.",
+            "Led end-to-end planning, logistics, and cross-functional coordination for startup workshops, seminars, and an app alpha launch.",
           highlights: [
-            "Aligned digital course structures with official academic plans (RPS)",
-            "Reviewed platform usability and authored guides for students and lecturers",
+            "Managed Ready SetSail 4 Workshop, Ecoxyztem Seminar, and LightenUp Alpha Launch",
+            "Aligned timelines, speaker management, stakeholders, and post-event reporting",
           ],
-          isCurrent: true,
+        },
+        {
+          role: "Event Secretary & Web Developer Intern",
+          organization: "SetSail BizAccel & Earth Day PT Nippon",
+          period: "Oct 2023 - Apr 2024",
+          summary:
+            "Built websites for student business tenants at SetSail and managed administration and correspondence for Earth Day with PT Nippon.",
+          highlights: [
+            "Collaborated across teams on tenant websites and entrepreneurship event committees",
+            "Handled meeting minutes, internal correspondence, and partner coordination",
+          ],
+        },
+        {
+          role: "Research Assistant",
+          organization: "President Research Center",
+          period: "Oct 2023 - Feb 2024",
+          summary:
+            "Supported multidisciplinary university research through structured data organization, documentation, and analytical reporting.",
+          highlights: [
+            "Maintained organized research records to improve departmental workflow efficiency",
+            "Strengthened analytical problem-solving, documentation, and team communication",
+          ],
         },
       ],
     },
     certificates: {
       heading: "Certificates & credentials",
-      subtitle: "Verified internship completions and research documentation",
+      subtitle: "Verified internships, leadership roles, and achievements",
       viewCert: "View certificate",
       viewReport: "View report",
       items: [
         {
           title: "Nippon Steel Internship",
-          issuer: "Nippon Steel",
-          period: "Industrial Internship",
+          issuer: "PT Nippon Steel Chemical & Material Indonesia",
+          period: "Aug 2025 - Dec 2025",
           description:
-            "Industrial internship exploring steel manufacturing workflows and industrial control systems.",
-          img: "/nippon.jpeg",
+            "Completed internship in the General Affair Division supporting internal administrative and compliance workflows.",
+          img: "/certificates/nippon-certificate.png",
           certificate: "/Internship_Certificate.pdf",
         },
         {
-          title: "BRIN Research Program",
+          title: "BRIN Research Internship",
           issuer: "National Research and Innovation Agency (BRIN)",
-          period: "IoT Research",
+          period: "Apr 2025 - May 2025",
           description:
-            "Research certificate on IoT monitoring and control systems for smart aquaculture and fisheries.",
-          img: "/brin.jpeg",
-          certificate: "/BRIN_Certificate.jpg",
+            "Internship certificate from the Research Center of Electronics BRIN for IoT monitoring and control research.",
+          img: "/certificates/Alysa%20Milano%20(%20BRIN%20).jpg",
+          certificate: "/certificates/Alysa%20Milano%20(%20BRIN%20).jpg",
           report: "/Fishery_Report.pdf",
         },
         {
@@ -651,9 +695,90 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
           issuer: "SetSail BizAccel, President University",
           period: "Sep 2023 - Apr 2024",
           description:
-            "Completed the structured internship experience program supporting business acceleration initiatives.",
-          img: "/setsail.jpg",
-          certificate: "/setsail-internship.png",
+            "Completed the structured Internship Experience Program supporting business acceleration initiatives.",
+          img: "/certificates/Alysa%20Milano%20(%20Setsail%2020232%20).png",
+          certificate: "/certificates/Alysa%20Milano%20(%20Setsail%2020232%20).png",
+        },
+        {
+          title: "Volunteer PIC — Administration Division",
+          issuer: "SetSail BizAccel, President University",
+          period: "Oct 2024 - May 2025",
+          description:
+            "Recognized for leading administrative operations, creative production, event collaboration, and operational assistance.",
+          img: "/certificates/Alysa%20Milano%20(%20PIC).jpg",
+          certificate: "/certificates/Alysa%20Milano%20(%20PIC).jpg",
+        },
+        {
+          title: "Interim Deputy Program Manager",
+          issuer: "SetSail BizAccel, President University",
+          period: "Sep 2024 - Feb 2025",
+          description:
+            "Certificate of appreciation for dedication and contributions to program execution and management at SetSail.",
+          img: "/certificates/Alysa%20Milano%20(%20Interim%20Setsail%20).jpg",
+          certificate: "/certificates/Alysa%20Milano%20(%20Interim%20Setsail%20).jpg",
+        },
+        {
+          title: "Research Assistant Internship",
+          issuer: "Fablab Jababeka, President University",
+          period: "Feb 2024",
+          description:
+            "Completed a four-month Research Assistant internship supporting research documentation and data organization.",
+          img: "/certificates/Alysa%20Milano%20(%20PRC%2020231%20).png",
+          certificate: "/certificates/Alysa%20Milano%20(%20PRC%2020231%20).png",
+        },
+        {
+          title: "Project Manager — LightenUp App Alpha Launch",
+          issuer: "LightenUp · BRIN · LPDP · President University",
+          period: "Dec 2024",
+          description:
+            "Led committee coordination and execution for the Launching the Alpha Version of the LightenUp App event.",
+          img: "/certificates/Alysa%20Milano%20(%20Launching%20LightenUp%20).png",
+          certificate: "/certificates/Alysa%20Milano%20(%20Launching%20LightenUp%20).png",
+        },
+        {
+          title: "Project Manager — Ecoxyztem Collaborative Seminar",
+          issuer: "SetSail BizAccel · Ecoxyztem Venture Builder",
+          period: "Oct 2024",
+          description:
+            "Managed planning, logistics, and speaker coordination for the International Relations Alumnae Sharing Session.",
+          img: "/certificates/Alysa%20Milano%20(%20Ecozystem%20).png",
+          certificate: "/certificates/Alysa%20Milano%20(%20Ecozystem%20).png",
+        },
+        {
+          title: "Project Manager — Ready SetSail 4th Batch",
+          issuer: "SetSail BizAccel, President University",
+          period: "Sep 2024",
+          description:
+            "Coordinated registration and event execution for the Ready SetSail Business Incubation 4th Batch onboarding.",
+          img: "/certificates/Alysa%20Milano%20(%20Ready%20Setsail%204%20).png",
+          certificate: "/certificates/Alysa%20Milano%20(%20Ready%20Setsail%204%20).png",
+        },
+        {
+          title: "Secretary — Earth Day Festival 2024",
+          issuer: "President University · PT Nippon Steel",
+          period: "Apr 2024",
+          description:
+            "Handled administrative documentation, correspondence, and partner coordination for Earth Day Festival 2024.",
+          img: "/certificates/Alysa%20Milano%20(%20Demo%20Day%20).jpg",
+          certificate: "/certificates/Alysa%20Milano%20(%20Demo%20Day%20).jpg",
+        },
+        {
+          title: "Quiz Winner — Beranda Sawit Nusantara II",
+          issuer: "Indonesian Oil Palm Society (MAKSI) · BPDPKS",
+          period: "Aug 2024",
+          description:
+            "Awarded Winner in the Beranda Sawit Nusantara (BSN) II national quiz held at Menara Batavia, Jakarta.",
+          img: "/certificates/Alysa%20Milano%20(%20Palm%20Oil%20).jpg",
+          certificate: "/certificates/Alysa%20Milano%20(%20Palm%20Oil%20).jpg",
+        },
+        {
+          title: "Treasurer — Zahirul Ma'ala",
+          issuer: "Zahirul Ma'ala, President University",
+          period: "Student Organization",
+          description:
+            "Recognized for dedication, financial administration, and commitment as Treasurer of Zahirul Ma'ala.",
+          img: "/certificates/zahirul-maala.png",
+          certificate: "/certificates/Alysa%20Milano(%20Trea%20ZahirulMaala%20).pdf",
         },
       ],
     },
@@ -1015,10 +1140,10 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
       education: {
         degree: "Sarjana Informatika (S.Kom.)",
         institution: "President University",
-        period: "2023 - 2026",
+        period: "Sep 2023 - Des 2026",
         faculty: "Fakultas Artificial Intelligence and Smart Manufacturing",
         summary:
-          "Membangun fondasi kuat dalam berpikir sistem, analisis terstruktur, perencanaan proyek, serta pelaporan kerja yang rapi.",
+          "IPK 3.87/4.0 · Beasiswa Jababeka (Peringkat 2). Fondasi kuat dalam berpikir sistem, analisis terstruktur, perencanaan proyek, serta pelaporan kerja yang rapi.",
       },
     },
     skills: {
@@ -1071,29 +1196,52 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
       annotation: "bukan sekadar satu jalur lurus",
       items: [
         {
-          role: "Program Magang",
+          role: "PIC Divisi Administrasi",
           organization: "SetSail BizAccel",
-          period: "Sep 2023 - Apr 2024",
+          period: "Okt 2024 - Mei 2025",
           summary:
-            "Mendukung inisiatif akselerasi bisnis, koordinasi tim, dan operasional harian program di President University.",
+            "Memimpin operasional administrasi program inkubasi bisnis universitas dengan dokumentasi dan koordinasi harian yang terstruktur.",
           highlights: [
-            "Berkolaborasi bersama tim bisnis mahasiswa dan pemangku kepentingan",
-            "Mengasah kemampuan administrasi, komunikasi, dan eksekusi operasional",
+            "Mengawal alur kerja internal di berbagai workshop dan kegiatan startup",
+            "Menjaga pelaporan sistematis serta komunikasi lintas tim yang rapi",
           ],
         },
         {
-          role: "Magang Industri & Peneliti IoT",
-          organization: "Nippon Steel & BRIN",
-          period: "2024",
+          role: "Magang Riset IoT",
+          organization: "BRIN (Pusat Riset Elektronika)",
+          period: "Apr 2025 - Mei 2025",
           summary:
-            "Mempelajari alur manufaktur industri secara langsung di Nippon Steel serta membangun prototipe IoT perikanan di BRIN.",
+            "Merencanakan dan menyelesaikan modul pemantauan suhu air otomatis selama 6 minggu untuk sistem akuakultur cerdas BRIN.",
           highlights: [
-            "Memahami disiplin industri, standar keselamatan, dan sistem kontrol",
-            "Menyusun laporan akhir riset perikanan cerdas BRIN",
+            "Menyusun proposal, flowchart sistem, log pengujian, dan laporan akhir riset",
+            "Mempresentasikan progres mingguan serta mengoordinasikan integrasi tim",
           ],
         },
         {
-          role: "Kontributor Tugas Akhir (RFID & Hardware)",
+          role: "Magang Pengembangan Sistem (HRGA & Legal)",
+          organization: "PT Nippon Steel Chemical & Material Indonesia",
+          period: "Agu 2025 - Des 2025",
+          summary:
+            "Mendukung departemen HRGA dan Legal dengan membangun alur kerja internal untuk administrasi dan kepatuhan regulasi.",
+          highlights: [
+            "Mendigitalisasi pencatatan General Affairs serta kepatuhan hukum perusahaan",
+            "Melakukan pengujian, perbaikan kendala, dan dokumentasi kesiapan sistem",
+          ],
+        },
+        {
+          role: "Magang Operasional Pembelajaran Digital",
+          organization: "President University eCampus",
+          period: "Mar 2026 - Jun 2026",
+          summary:
+            "Mendukung operasional pembelajaran jarak jauh untuk 15+ kelas melalui penataan modul, tinjauan platform, dan panduan pengguna.",
+          highlights: [
+            "Menyelaraskan 15+ kelas daring dan 12+ modul mingguan dengan standar RPS",
+            "Menyusun 5+ panduan mandiri bagi 500+ pengguna, menekan pertanyaan berulang 30%",
+          ],
+          isCurrent: true,
+        },
+        {
+          role: "Kontributor Tugas Akhir (Otomasi Gerbang)",
           organization: "PT. Nesinak Industries",
           period: "2025 - 2026",
           summary:
@@ -1104,42 +1252,63 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
           ],
         },
         {
-          role: "Magang Operasional Pembelajaran Digital",
-          organization: "President University eCampus",
-          period: "Mar 2026 - Jun 2026",
+          role: "Project Manager (Acara & Peluncuran Produk)",
+          organization: "SetSail BizAccel & LightenUp",
+          period: "Sep 2024 - Des 2024",
           summary:
-            "Mendukung operasional pembelajaran jarak jauh dengan menata kelas daring, modul praktik, dan panduan pengguna.",
+            "Memimpin perencanaan, logistik, dan koordinasi lintas tim untuk workshop startup, seminar, serta peluncuran alpha aplikasi.",
           highlights: [
-            "Menyelaraskan struktur materi kursus digital dengan rencana pembelajaran resmi (RPS)",
-            "Meninjau kemudahan platform serta menyusun panduan untuk mahasiswa dan dosen",
+            "Mengelola Ready SetSail 4 Workshop, Seminar Ecoxyztem, dan LightenUp Alpha Launch",
+            "Menyelaraskan jadwal, pembicara, pemangku kepentingan, dan dokumentasi acara",
           ],
-          isCurrent: true,
+        },
+        {
+          role: "Sekretaris Acara & Magang Web Developer",
+          organization: "SetSail BizAccel & Earth Day PT Nippon",
+          period: "Okt 2023 - Apr 2024",
+          summary:
+            "Membangun situs web tenant mahasiswa di SetSail serta menangani administrasi dan korespondensi Earth Day bersama PT Nippon.",
+          highlights: [
+            "Berkolaborasi lintas tim pada situs tenant dan kepanitiaan acara kewirausahaan",
+            "Menangani notulensi rapat, surat-menyurat internal, dan koordinasi mitra",
+          ],
+        },
+        {
+          role: "Asisten Peneliti",
+          organization: "President Research Center",
+          period: "Okt 2023 - Feb 2024",
+          summary:
+            "Mendukung kegiatan riset multidisiplin universitas melalui penataan data, dokumentasi, dan pelaporan analitis.",
+          highlights: [
+            "Menjaga kerapian arsip riset untuk meningkatkan efisiensi alur kerja departemen",
+            "Mengasah pemecahan masalah analitis, dokumentasi, dan komunikasi lintas tim",
+          ],
         },
       ],
     },
     certificates: {
       heading: "Sertifikat & kredensial",
-      subtitle: "Dokumentasi penyelesaian program magang dan riset terverifikasi",
+      subtitle: "Sertifikat magang, kepemimpinan, dan pencapaian terverifikasi",
       viewCert: "Lihat sertifikat",
       viewReport: "Lihat laporan",
       items: [
         {
           title: "Magang Nippon Steel",
-          issuer: "Nippon Steel",
-          period: "Magang Industri",
+          issuer: "PT Nippon Steel Chemical & Material Indonesia",
+          period: "Agu 2025 - Des 2025",
           description:
-            "Pengalaman magang industri mempelajari proses manufaktur baja dan sistem kontrol industri.",
-          img: "/nippon.jpeg",
+            "Menyelesaikan magang di Divisi General Affair mendukung alur kerja administrasi dan kepatuhan internal.",
+          img: "/certificates/nippon-certificate.png",
           certificate: "/Internship_Certificate.pdf",
         },
         {
-          title: "Program Riset BRIN",
+          title: "Magang Riset BRIN",
           issuer: "Badan Riset dan Inovasi Nasional (BRIN)",
-          period: "Riset IoT",
+          period: "Apr 2025 - Mei 2025",
           description:
-            "Sertifikat riset pengembangan sistem pemantauan dan kontrol IoT untuk sektor perikanan cerdas.",
-          img: "/brin.jpeg",
-          certificate: "/BRIN_Certificate.jpg",
+            "Sertifikat magang Pusat Riset Elektronika BRIN untuk pengembangan sistem pemantauan dan kontrol IoT.",
+          img: "/certificates/Alysa%20Milano%20(%20BRIN%20).jpg",
+          certificate: "/certificates/Alysa%20Milano%20(%20BRIN%20).jpg",
           report: "/Fishery_Report.pdf",
         },
         {
@@ -1148,8 +1317,89 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
           period: "Sep 2023 - Apr 2024",
           description:
             "Menyelesaikan program magang terstruktur dalam mendukung inisiatif akselerasi bisnis.",
-          img: "/setsail.jpg",
-          certificate: "/setsail-internship.png",
+          img: "/certificates/Alysa%20Milano%20(%20Setsail%2020232%20).png",
+          certificate: "/certificates/Alysa%20Milano%20(%20Setsail%2020232%20).png",
+        },
+        {
+          title: "Volunteer PIC — Divisi Administrasi",
+          issuer: "SetSail BizAccel, President University",
+          period: "Okt 2024 - Mei 2025",
+          description:
+            "Apresiasi atas peran memimpin operasional administrasi, kolaborasi acara, dan dukungan harian di SetSail.",
+          img: "/certificates/Alysa%20Milano%20(%20PIC).jpg",
+          certificate: "/certificates/Alysa%20Milano%20(%20PIC).jpg",
+        },
+        {
+          title: "Interim Deputy Program Manager",
+          issuer: "SetSail BizAccel, President University",
+          period: "Sep 2024 - Feb 2025",
+          description:
+            "Sertifikat apresiasi atas dedikasi dan kontribusi dalam pengelolaan serta eksekusi program SetSail.",
+          img: "/certificates/Alysa%20Milano%20(%20Interim%20Setsail%20).jpg",
+          certificate: "/certificates/Alysa%20Milano%20(%20Interim%20Setsail%20).jpg",
+        },
+        {
+          title: "Magang Asisten Peneliti",
+          issuer: "Fablab Jababeka, President University",
+          period: "Feb 2024",
+          description:
+            "Menyelesaikan magang Asisten Peneliti selama empat bulan dalam dokumentasi riset dan pengelolaan data.",
+          img: "/certificates/Alysa%20Milano%20(%20PRC%2020231%20).png",
+          certificate: "/certificates/Alysa%20Milano%20(%20PRC%2020231%20).png",
+        },
+        {
+          title: "Project Manager — Peluncuran Alpha LightenUp",
+          issuer: "LightenUp · BRIN · LPDP · President University",
+          period: "Des 2024",
+          description:
+            "Memimpin koordinasi panitia dan pelaksanaan acara Launching the Alpha Version of the LightenUp App.",
+          img: "/certificates/Alysa%20Milano%20(%20Launching%20LightenUp%20).png",
+          certificate: "/certificates/Alysa%20Milano%20(%20Launching%20LightenUp%20).png",
+        },
+        {
+          title: "Project Manager — Seminar Kolaborasi Ecoxyztem",
+          issuer: "SetSail BizAccel · Ecoxyztem Venture Builder",
+          period: "Okt 2024",
+          description:
+            "Mengelola perencanaan, logistik, dan koordinasi pembicara pada seminar kolaborasi alumni Hubungan Internasional.",
+          img: "/certificates/Alysa%20Milano%20(%20Ecozystem%20).png",
+          certificate: "/certificates/Alysa%20Milano%20(%20Ecozystem%20).png",
+        },
+        {
+          title: "Project Manager — Ready SetSail Batch 4",
+          issuer: "SetSail BizAccel, President University",
+          period: "Sep 2024",
+          description:
+            "Mengoordinasikan registrasi dan pelaksanaan program inkubasi bisnis Ready SetSail Batch 4.",
+          img: "/certificates/Alysa%20Milano%20(%20Ready%20Setsail%204%20).png",
+          certificate: "/certificates/Alysa%20Milano%20(%20Ready%20Setsail%204%20).png",
+        },
+        {
+          title: "Sekretaris — Earth Day Festival 2024",
+          issuer: "President University · PT Nippon Steel",
+          period: "Apr 2024",
+          description:
+            "Menangani dokumentasi administrasi, surat-menyurat, dan koordinasi mitra pada Earth Day Festival 2024.",
+          img: "/certificates/Alysa%20Milano%20(%20Demo%20Day%20).jpg",
+          certificate: "/certificates/Alysa%20Milano%20(%20Demo%20Day%20).jpg",
+        },
+        {
+          title: "Pemenang Kuis — Beranda Sawit Nusantara II",
+          issuer: "Masyarakat Perkelapasawitan Indonesia (MAKSI) · BPDPKS",
+          period: "Agu 2024",
+          description:
+            "Meraih predikat Pemenang pada kompetisi kuis Beranda Sawit Nusantara (BSN) II di Menara Batavia, Jakarta.",
+          img: "/certificates/Alysa%20Milano%20(%20Palm%20Oil%20).jpg",
+          certificate: "/certificates/Alysa%20Milano%20(%20Palm%20Oil%20).jpg",
+        },
+        {
+          title: "Bendahara — Zahirul Ma'ala",
+          issuer: "Zahirul Ma'ala, President University",
+          period: "Organisasi Mahasiswa",
+          description:
+            "Apresiasi atas dedikasi, pengelolaan administrasi keuangan, dan komitmen sebagai Bendahara Zahirul Ma'ala.",
+          img: "/certificates/zahirul-maala.png",
+          certificate: "/certificates/Alysa%20Milano(%20Trea%20ZahirulMaala%20).pdf",
         },
       ],
     },

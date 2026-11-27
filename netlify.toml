@@ -17,6 +17,12 @@
   to = "/gams/:splat"
   status = 200
 
+# Legal API Function
+[[redirects]]
+  from = "/legal/api/*"
+  to = "/.netlify/functions/legal-api"
+  status = 200
+
 [[redirects]]
   from = "/legal/*"
   to = "/legal/:splat"

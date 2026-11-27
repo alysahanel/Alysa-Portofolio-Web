@@ -8,7 +8,7 @@ interface CertificatesSectionProps {
   showLessLabel: string;
 }
 
-const INITIAL_VISIBLE = 4;
+const INITIAL_VISIBLE = 3;
 
 export function CertificatesSection({
   certificates,
@@ -48,11 +48,12 @@ export function CertificatesSection({
               }
               className="animate-fade-rise group rounded-xl overflow-hidden bg-paper border border-white/30 shadow-[0_10px_28px_rgba(35,28,24,0.14)] flex flex-col"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-sand border-b border-accent/12">
+              <div className="aspect-[16/10] overflow-hidden bg-white p-2 border-b border-accent/12 flex items-center justify-center">
                 <img
                   src={cert.img}
                   alt={cert.title}
-                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-400"
+                  loading="lazy"
+                  className="w-full h-full object-contain group-hover:scale-[1.03] transition-transform duration-400"
                 />
               </div>
 

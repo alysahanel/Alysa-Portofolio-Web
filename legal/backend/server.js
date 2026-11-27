@@ -39,8 +39,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use((req, res, next) => {
-  req.setTimeout(5 * 60 * 1000); // 5 menit
-  res.setTimeout(5 * 60 * 1000);
+  try {
+    if (req.socket && typeof req.socket.setTimeout === 'function') {
+      req.setTimeout(5 * 60 * 1000); // 5 menit
+      res.setTimeout(5 * 60 * 1000);
+    }
+  } catch {}
   next();
 });
 
@@ -2660,6 +2664,8 @@ async function startDbWithRetry() {
   }
 }
 startDbWithRetry();
-app.listen(PORT, () => {
-  console.log(`Regulatory UI running at http://localhost:${PORT}/`);
-});
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  app.listen(PORT, () => {
+    console.log(`Regulatory UI running at http://localhost:${PORT}/`);
+  });
+}

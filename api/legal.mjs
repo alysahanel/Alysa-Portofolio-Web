@@ -1,2 +1,8 @@
-import app from '../legal/backend/server.js';
-export default app;
+import express from "express";
+import legalApp from "../legal/backend/server.js";
+
+const wrapper = express();
+wrapper.use("/legal", legalApp);
+wrapper.use("/", legalApp);
+
+export default wrapper;
