@@ -522,7 +522,7 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
         period: "Sep 2023 - Dec 2026",
         faculty: "Faculty of Artificial Intelligence and Smart Manufacturing",
         summary:
-          "GPA 3.87/4.0 · Jababeka Scholarship (2nd Rank). Strong foundation in systems thinking, structured analysis, project planning, and technical reporting.",
+          "GPA 3.88/4.0 · Jababeka Scholarship (2nd Rank). Strong foundation in systems thinking, structured analysis, project planning, and technical reporting.",
       },
     },
     skills: {
@@ -1143,7 +1143,7 @@ export const PORTFOLIO_CONTENT: Record<Lang, PortfolioCopy> = {
         period: "Sep 2023 - Des 2026",
         faculty: "Fakultas Artificial Intelligence and Smart Manufacturing",
         summary:
-          "IPK 3.87/4.0 · Beasiswa Jababeka (Peringkat 2). Fondasi kuat dalam berpikir sistem, analisis terstruktur, perencanaan proyek, serta pelaporan kerja yang rapi.",
+          "IPK 3.88/4.0 · Beasiswa Jababeka (Peringkat 2). Fondasi kuat dalam berpikir sistem, analisis terstruktur, perencanaan proyek, serta pelaporan kerja yang rapi.",
       },
     },
     skills: {

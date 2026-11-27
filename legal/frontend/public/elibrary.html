@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
+  <link rel="stylesheet" href="/legal/assets/global-sidebar.css" />
   
   <script defer src="/legal/assets/elibrary.js"></script>
   <script src="/legal/assets/global-sidebar.js" defer></script>
@@ -244,62 +244,62 @@
 </head>
 
 <body class="bg-gray-50">
-  <button id="btnMenu" class="fixed top-5 left-5 z-50 bg-white p-3 rounded-lg shadow-lg md:hidden">
+  <button id="btnMenu" aria-label="Open menu" class="fixed top-4 left-4 z-40 bg-white w-11 h-11 rounded-xl shadow-lg flex items-center justify-center md:hidden">
     <i class="fas fa-bars text-xl text-gray-700"></i>
   </button>
 
-  <main class="min-h-screen md:ml-64">
-    <section class="gradient-bg relative overflow-hidden min-h-screen px-6 py-8 md:px-12">
+  <main class="legal-main min-h-screen md:ml-64">
+    <section class="gradient-bg relative overflow-hidden min-h-screen px-4 sm:px-6 py-8 md:px-12">
       <div class="hero-circle"></div>
 
-      <div class="absolute top-6 right-6 z-20">
-        <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-2xl border border-white/20 shadow-2xl">
-          <div class="bg-gradient-to-br from-blue-400 to-cyan-300 w-12 h-12 rounded-xl flex items-center justify-center shadow-lg transform rotate-3 hover:rotate-6 transition-transform">
-            <i class="fas fa-user-shield text-white text-2xl"></i>
+      <div class="absolute top-4 right-4 md:top-6 md:right-6 z-20">
+        <div class="flex items-center gap-2.5 md:gap-3 bg-white/10 backdrop-blur-sm px-3 py-2 md:px-5 md:py-3 rounded-xl md:rounded-2xl border border-white/20 shadow-xl">
+          <div class="bg-gradient-to-br from-blue-400 to-cyan-300 w-9 h-9 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg transform rotate-3 hover:rotate-6 transition-transform shrink-0">
+            <i class="fas fa-user-shield text-white text-lg md:text-2xl"></i>
           </div>
           <div class="text-left">
-            <h1 class="text-white font-bold text-xl leading-none tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.1);">Compliance System</h1>
-            <p class="text-blue-100 font-medium text-sm tracking-[0.15em] mt-1">Alysa Milano</p>
+            <h1 class="text-white font-bold text-sm md:text-xl leading-none tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.1);">Compliance System</h1>
+            <p class="text-blue-100 font-medium text-[11px] md:text-sm tracking-[0.12em] md:tracking-[0.15em] mt-0.5 md:mt-1">Alysa Milano</p>
           </div>
         </div>
       </div>
       
       <div class="relative z-10 max-w-7xl mx-auto pt-20">
-        <h1 class="hero-title text-white font-extrabold text-1xl md:text-2xl lg:text-3xl mb-2 tracking-tight">
+        <h1 class="hero-title text-white font-extrabold text-xl md:text-2xl lg:text-3xl mb-2 tracking-tight">
           Perpustakaan
         </h1>
-        <h2 class="text-white font-semibold text-xl md:text-1xl lg:text-2xl mb-16 tracking-wide">
+        <h2 class="text-white font-semibold text-lg md:text-xl lg:text-2xl mb-10 md:mb-16 tracking-wide">
           HIERARKI PERATURAN
         </h2>
 
         <section id="regulationGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-12">
           <div class="regulation-card text-center p-5 rounded-xl shadow-md bg-white" data-category="undang-undang">
             <h3 class="text-base md:text-lg font-semibold text-gray-800">Undang - Undang</h3>
-            <div class="regulation-count text-sm text-white-500 mt-1">0 Peraturan</div>
+            <div class="regulation-count text-sm text-white/85 mt-1">0 Peraturan</div>
           </div>
 
           <div class="regulation-card text-center p-5 rounded-xl shadow-md bg-white" data-category="peraturan-pemerintah">
             <h3 class="text-base md:text-lg font-semibold text-gray-800">Peraturan Pemerintah</h3>
-            <div class="regulation-count text-sm text-white-500 mt-1">0 Peraturan</div>
+            <div class="regulation-count text-sm text-white/85 mt-1">0 Peraturan</div>
           </div>
           <div class="regulation-card text-center p-5 rounded-xl shadow-md bg-white" data-category="peraturan-presiden">
             <h3 class="text-base md:text-lg font-semibold text-gray-800">Peraturan Presiden</h3>
-            <div class="regulation-count text-sm text-white-500 mt-1">0 Peraturan</div>
+            <div class="regulation-count text-sm text-white/85 mt-1">0 Peraturan</div>
           </div>
 
           <div class="regulation-card text-center p-5 rounded-xl shadow-md bg-white" data-category="peraturan-daerah">
             <h3 class="text-base md:text-lg font-semibold text-gray-800">Peraturan Daerah Provinsi dan Kabupaten/Kota</h3>
-            <div class="regulation-count text-sm text-white-500 mt-1">0 Peraturan</div>
+            <div class="regulation-count text-sm text-white/85 mt-1">0 Peraturan</div>
           </div>
 
           <div class="regulation-card text-center p-5 rounded-xl shadow-md bg-white" data-category="peraturan-kawasan">
             <h3 class="text-base md:text-lg font-semibold text-gray-800">Peraturan Kawasan Industri</h3>
-            <div class="regulation-count text-sm text-white-500 mt-1">0 Peraturan</div>
+            <div class="regulation-count text-sm text-white/85 mt-1">0 Peraturan</div>
           </div>
 
           <div class="regulation-card text-center p-5 rounded-xl shadow-md bg-white" data-category="peraturan-lainnya">
             <h3 class="text-base md:text-lg font-semibold text-gray-800">Peraturan Lainnya</h3>
-            <div class="regulation-count text-sm text-white-500 mt-1">0 Peraturan</div>
+            <div class="regulation-count text-sm text-white/85 mt-1">0 Peraturan</div>
           </div>
         </section>
       </div>
